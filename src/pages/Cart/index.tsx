@@ -7,14 +7,8 @@ import { useWindowSize } from '../../hooks/useWindowSize';
 import { formatPrice } from '../../utils';
 
 import { Border, CartFooter, ColumnTitle, Container, ContainerItems, ContainerRows, Content, TotalLabel, TotalPrice } from "./styles";
+import { IMovie } from '../../types'
 
-type ItemProps = {
-  id: number,
-  title: string,
-  price: number,
-  image: string,
-  count?: number;
-};
 
 const EmptyCart = ({ handleBackToHome }: { handleBackToHome: () => void }) => {
 
@@ -55,7 +49,7 @@ const Cart = () => {
           <ColumnTitle>QTD</ColumnTitle>
           <ColumnTitle>SUBTOTAL</ColumnTitle>
           <ColumnTitle></ColumnTitle>
-          {cartItems.map((item: ItemProps) => (
+          {cartItems.map((item: IMovie) => (
             <CartItem data={item} key={item.id} />
           ))}
 

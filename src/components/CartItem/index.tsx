@@ -1,20 +1,14 @@
 
 import Trash from '../../assets/Trash.svg'
 import useCart from '../../hooks/cart.context';
+import { IMovie } from '../../types';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { formatPrice } from '../../utils';
-import { ChangeQtd } from '../ChangeQtd';
+import { UpdateQuantity } from '../UpdateQuantity';
+
 import { ContainerData, ContainerMobile, ContainerMobileImage, ContainerMobileItemData, ContainerMobileTitle, ContainerPrices, Image, MobileImage, Price, SubTotal, SubTotalLabel, Title } from './styles'
 
-type IProps = {
-    id: number,
-    title: string,
-    price: number,
-    image: string,
-    count?: number;
-};
-
-export const CartItem = ({ data }: { data: IProps }) => {
+export const CartItem = ({ data }: { data: IMovie }) => {
 
     const { handleRemove } = useCart();
     const windowSize = useWindowSize();
@@ -28,7 +22,7 @@ export const CartItem = ({ data }: { data: IProps }) => {
                 <ContainerMobileItemData>
                     <ContainerMobileTitle>
                         <Title>{data.title}</Title>
-                        <ChangeQtd item={data} />
+                        <UpdateQuantity item={data} />
                     </ContainerMobileTitle>
                     <ContainerPrices>
                         <div>
@@ -56,7 +50,7 @@ export const CartItem = ({ data }: { data: IProps }) => {
                 </div>
             </ContainerData>
             <ContainerData style={{ justifyContent: 'flex-start' }}>
-                <ChangeQtd item={data} />
+                <UpdateQuantity item={data} />
             </ContainerData>
             <ContainerData>
                 <Price>{formatPrice(data.price * (data.count || 1))}</Price>

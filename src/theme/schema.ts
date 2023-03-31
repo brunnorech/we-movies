@@ -18,7 +18,7 @@ const theme = {
         },
         fontFamily: 'Open Sans, sans-serif',
         fontWeight: {
-            bold400: '400',
+            regular: '400',
             bold600: '600',
             bold700: '700',
         }

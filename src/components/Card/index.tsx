@@ -5,14 +5,9 @@ import { Button } from "../Button";
 import { CartButton } from "../CartButton";
 import useCart from "../../hooks/cart.context";
 
-interface IProps {
-    id: number;
-    title: string;
-    price: number;
-    image: string;
-};
+import { IMovie } from '../../types'
 
-export const Card = (item: IProps) => {
+export const Card = (item: IMovie) => {
 
     const { updateCart, addedItemVerify, getCountMovieInCart } = useCart();
 

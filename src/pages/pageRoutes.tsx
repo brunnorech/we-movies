@@ -1,14 +1,13 @@
 import { Navigate } from "react-router-dom";
+
+import { IRoute } from '../types';
+
 import Cart from "./Cart";
 import  Finish  from "./Finish";
 import Home from "./Home";
 
-export interface IRoute {
-    title: string;
-    path: string;
-    element: JSX.Element;
-    errorElement?: JSX.Element;
-  }
+
+export type { IRoute };
 
   const routes: IRoute[] = [
     {

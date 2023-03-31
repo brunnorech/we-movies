@@ -10,7 +10,7 @@ align-items: center;
 
     > span {
         font-family:${props => props.theme.typography.fontFamily};
-        font-weight: ${props => props.theme.typography.fontWeight.bold400};
+        font-weight: ${props => props.theme.typography.fontWeight.regular};
         font-size: ${props => props.theme.typography.fontSize.small};
         line-height: 1rem;
         text-align: center;

@@ -1,13 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-type IMovie = {
-  id: number;
-  title: string;
-  price: number;
-  image: string;
-  count?: number;
-};
-
+import { IMovie } from '../types';
 
 type CartProps = {
   items: IMovie[];

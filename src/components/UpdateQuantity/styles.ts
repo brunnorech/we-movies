@@ -35,7 +35,7 @@ export const CountView = styled.div`
 
 export const Count = styled.span`
         color: ${props => props.theme.colors.main};
-        font-weight: ${props => props.theme.typography.fontWeight.bold400}; 
+        font-weight: ${props => props.theme.typography.fontWeight.regular}; 
         font-size: ${props => props.theme.typography.fontSize.medium};
         font-family: ${props => props.theme.typography.fontFamily};
         line-height: 1.18rem;
